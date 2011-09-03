@@ -35,6 +35,14 @@ test("when deleting a task, it should be removed from the backlog", function() {
 
     ok(backlog.tasks().length == 0);
 });
+
+test("when viewing a task, editing should be false", function(){
+    var t = new todos.Task();
+    t.editing(true);
+    t.view();
+    equal(t.editing(), false);
+})
+
 test("when storing a task, should contain name and status", function(){
     var t = new todos.Task("test name", true);
     var dto = t.toDto();
