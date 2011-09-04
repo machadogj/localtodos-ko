@@ -25,13 +25,15 @@
         </div>
           
         <div id="todos">
-          <ul id="todo-list" data-bind="foreach:tasks, sortableList:tasks">
+          <ul id="todo-list" data-bind="template:{name:'tmpl-todo',foreach:tasks}, sortableList:tasks">
+            <script id="tmpl-todo" type="text/html">
               <li draggable="true" data-bind="css:{done:completed,editing:editing}, event:{dblclick:edit}">
                   <input class="todo-check" type="checkbox" data-bind="checked:completed">
-                  <div class="todo-content" data-bind="text:name"></div>
+                  <div class="todo-content" data-bind="text:name">sf</div>
                   <span class="todo-destroy" data-bind="click:remove"></span>
                   <input class="todo-input" type="text" data-bind="value:name,event:{blur:view}">
               </li>
+            </script>
           </ul>
         </div>
 

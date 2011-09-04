@@ -1,0 +1,5 @@
+Localtodos-ko is a knockout version of the http://localtodos.com sample originally done in backbone.js by Jérôme Gravel-Niquet.
+
+The sample has been done using Test First TDD technique using qunit as a testing framework. This sample is intended to show knockout.js best practices.
+
+For a working you can browse to http://machadogj.com/demos/localtodos.
