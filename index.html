@@ -19,7 +19,7 @@
 
         <div id="create-todo" data-bind="with: newTask">
           <form data-bind="submit:save">
-            <input id="new-todo" placeholder="What needs to be done?" type="text" data-bind="value:name">
+            <input id="new-todo" placeholder="What needs to be done?" type="text" data-bind="value:name,valueUpdate:'afterkeydown'">
           </form>
           <span class="ui-tooltip-top">Press Enter to create this task</span>
         </div>
@@ -29,7 +29,7 @@
             <script id="tmpl-todo" type="text/html">
               <li draggable="true" data-bind="css:{done:completed,editing:editing}, event:{dblclick:edit}">
                   <input class="todo-check" type="checkbox" data-bind="checked:completed">
-                  <div class="todo-content" data-bind="text:name">sf</div>
+                  <span class="todo-content" data-bind="text:name"></span>
                   <span class="todo-destroy" data-bind="click:remove"></span>
                   <input class="todo-input" type="text" data-bind="value:name,event:{blur:view}">
               </li>
